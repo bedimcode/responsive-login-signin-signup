@@ -1,0 +1,229 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root{
+    /*===== Colores =====*/
+    --first-color: #9D4BFF;
+    --first-color-dark: #23004D;
+    --first-color-light: #A49EAC;
+    --first-color-lighten: #F2F2F2;
+
+    /*===== Font and typography =====*/
+    --body-font: 'Open Sans', sans-serif;
+    
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+    @media screen and (min-width: 768px){
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);       
+    color: var(--first-color-dark);
+}
+h1{
+    margin: 0;  
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*===== LOGIN=====*/
+.login{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100vh;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    
+    &__content{
+        display: grid;
+    }
+    &__img{
+        justify-self: center;
+        & img{
+            width: 310px;
+            margin-top: 1.5rem;
+        }
+    }
+    &__forms{
+        position: relative;
+        height: 368px;
+    }
+    &__registre, &__create{
+        position: absolute; 
+        bottom: 1rem;
+        width: 100%;
+        background-color: var(--first-color-lighten);
+        padding: 2rem 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(35,0,77,.2);
+        animation-duration: .4s;
+        animation-name: animate-login;
+
+        @keyframes animate-login {
+            0%{ 
+                transform: scale(1,1);
+            }
+            50%{ 
+                transform: scale(1.1,1.1);
+            }
+            100%{ 
+                transform: scale(1,1);
+            }
+        }
+    }
+    &__title{
+        font-size: var(--h1-font-size);
+        margin-bottom: 2rem;
+    }
+    &__box{
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        column-gap: .5rem;
+        padding: 1.125rem 1rem;
+        background-color: #FFF;
+        margin-top: 1rem;
+        border-radius: .5rem;
+    }
+    &__icon{
+        font-size: 1.5rem;
+        color: var(--first-color);
+    }
+    &__input{
+        border: none;
+        outline: none;
+        font-size: var(--normal-font-size);
+        font-weight: 700;
+        color: var(--first-color-dark);
+
+        &::placeholder{
+            font-size: var(--normal-font-size);
+            font-family: var(--body-font);
+            color: var(--first-color-light);
+        }
+    }
+    &__forgot{
+        display: block;
+        width: max-content;
+        margin-left: auto;
+        margin-top: .5rem;
+        font-size: var(--small-font-size);
+        font-weight: 600;
+        color: var(--first-color-light);
+    }
+    &__button{
+        display: block;
+        padding: 1rem;
+        margin: 2rem 0;
+        background-color: var(--first-color);
+        color: #FFF;
+        font-weight: 600;
+        text-align: center;
+        border-radius: .5rem;
+        transition: .3s;
+
+        &:hover{
+            background-color: var(--first-color-dark);
+        }
+    }
+    &__account, &__signin, &__signup{
+        font-weight: 600;
+        font-size: var(--small-font-size);
+    }
+    &__account{
+        color: var(--first-color-dark);
+    }
+    &__signin, &__signup{
+        color: var(--first-color);
+        cursor: pointer;
+    }
+    &__social{
+        margin-top: 2rem;
+
+        &-icon{
+            font-size: 1.5rem;
+            color: var(--first-color-dark);
+            margin: 0 1.5rem;
+        }
+    }
+}
+
+/*Show login*/
+.block{
+    display: block;
+}
+
+/*Hidden login*/
+.none{
+    display: none;
+}
+
+/* ===== MEDIA QUERIES =====*/
+
+@media screen and (min-width: 576px){
+    .login{
+        &__forms{
+            width: 348px;
+            justify-self: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .login{
+        height: 100vh;
+        overflow: hidden;
+
+        &__content{
+            grid-template-columns: repeat(2, max-content);
+            justify-content: center;
+            align-items: center;
+            margin-left: 10rem;
+        }
+        &__img{
+            display: flex;
+            width: 600px;
+            height: 588px;
+            background-color: var(--first-color-lighten);
+            border-radius: 1rem;
+            padding-left: 1rem;
+            
+            & img{
+                width: 390px;
+                margin-top: 0;
+            }
+        }
+
+        &__registre, &__create{
+            left: -11rem;
+        }
+        &__registre{
+            bottom: -2rem;
+        }
+        &__create{
+            bottom: -5.5rem;
+        }
+    }
+}
+
