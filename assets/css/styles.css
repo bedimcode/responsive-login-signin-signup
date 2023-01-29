@@ -7,13 +7,13 @@
   --first-color: #9D4BFF;
   --first-color-dark: #23004D;
   --first-color-light: #A49EAC;
-  --first-color-lighten: #F2F2F2;
+  --first-color-lighten: #E4F0FF;
 
   /*===== Font and typography =====*/
   --body-font: 'Open Sans', sans-serif;
   --h1-font-size: 1.5rem;
   --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --small-font-size: .814rem;
 }
 
 @media screen and (min-width: 768px){
