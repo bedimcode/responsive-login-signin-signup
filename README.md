@@ -1,7 +1,13 @@
-# Responsive Login SignIn SignUp
+# Responsive Login & Registration Form
 ## [Watch it on youtube](https://youtu.be/aHA50b0jLCo)
-### Responsive Login SignIn SignUp
-Nice responsive login and registration form using Html, Css and JavaScript. Change with a click if you want to resgitrarte or log in, when changing it shows a quite elegant animation.
+### Responsive Login & Registration Form
 
-Don't forget to join the channel for more videos like this.
-[Bedimcode](https://www.youtube.com/c/Bedimcode)
+- Responsive Login & Registration Form Using HTML CSS & JavaScript
+- Includes a login form and registration form.
+- With animations when changing forms.
+- Developed first with the Mobile First methodology, then for desktop.
+- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+
+💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
+
+![preview img](/preview.png)
